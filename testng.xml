@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SuiteDespegarTest">
-  <test thread-count="5" name="TestValidarAlojamiento">
+<suite name="SuiteDespegarTestI">
+<parameter name="UrlDespegar" value="https://www.despegar.com.ar"></parameter>
+  <test thread-count="5" name="DespegarTestI">
+  <classes>>
+  <class name="DespegarTestI"/>
+  </classes>
+  <groups>
+  <run>
+  <include name="despegarTestI">
+  </include>
+  </run>
+  </groups>
     <classes>
-      <class name=".DespegarTest"/>
+      <class name=".DespegarTestI"/>
     </classes>
   </test> <!-- TestValidarAlojamiento -->
 </suite> <!-- SuiteDespegarTest -->
