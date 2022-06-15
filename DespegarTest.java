@@ -38,8 +38,8 @@
 		List<WebElement> Ciudades = driver.findElements(By.cssSelector("div.ac-wrapper.-show>div>div>ul>li"));
 		WebElement Lugar = Ciudades.get(0);
 		Assert.assertTrue(Lugar.isDisplayed(),"Ciudades no encontrada");
-		Lugar.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Lugar));
+		Lugar.click();
 		
 		WebElement Fecha = driver.findElement(By.cssSelector("div#searchbox-sbox-box-hotels div.sbox5-box-dates-checkbox-container div.sbox5-dates-input1"));
 		Assert.assertTrue(Fecha.isDisplayed(),"Fecha no encontrada");
@@ -48,28 +48,28 @@
 		
 		WebElement FechaIngreso = driver.findElement(By.cssSelector("div.sbox5-floating-tooltip-opened div.calendar-container div.-today"));
 		Assert.assertTrue(FechaIngreso.isDisplayed(),"FechaIngreso no encontrada");
-		FechaIngreso.click();
 		wait.until(ExpectedConditions.elementToBeClickable(FechaIngreso));
+		FechaIngreso.click();
 		
 		WebElement Fecha1 = driver.findElement(By.cssSelector("div#searchbox-sbox-box-box-hotels div.sbox5-box-dates-checkbox-container div.sbox5-dates-input2"));
 		Assert.assertTrue(Fecha1.isDisplayed(),"Fecha1 no encontrada");
-		Fecha1.click();
 		wait.until(ExpectedConditions.elementToBeClickable(Fecha1));
+		Fecha1.click();
 		
 		WebElement FechaSalida = driver.findElement(By.cssSelector("div.sbox5-floating-tooltip-opened div.calendar-container div.-selected + div"));
 		Assert.assertTrue(FechaSalida.isDisplayed(),"FechaSalida no encontrada");
-		FechaSalida.click();
 		wait.until(ExpectedConditions.elementToBeClickable(FechaSalida));
+		FechaSalida.click();
 		
 		WebElement AplicarButton = driver.findElement(By.cssSelector("div.sbox5-floating-tooltip-opened div.calendar-footer em.btn-text"));
 		Assert.assertTrue(AplicarButton.isDisplayed(),"Boton no encontrado");
-		AplicarButton.click();
 		wait.until(ExpectedConditions.elementToBeClickable(AplicarButton));
+		AplicarButton.click();
 		
 		WebElement BuscarButton = driver.findElement(By.cssSelector("div#searchbox-sbox-box-hotels button"));
 		Assert.assertTrue(BuscarButton.isDisplayed(),"BuscarButton no encontrado");
+	    wait.until(ExpectedConditions.elementToBeClickable(BuscarButton));
 		BuscarButton.click();
-		wait.until(ExpectedConditions.elementToBeClickable(BuscarButton));
 		
 		driver.close();
 		
